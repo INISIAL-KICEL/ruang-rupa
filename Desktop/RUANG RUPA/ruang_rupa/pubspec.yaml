@@ -1,0 +1,82 @@
+name: ruang_rupa
+description: "Aplikasi e-commerce furnitur custom 3D & AR — Ruang Rupa"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management & Routing
+  get: ^4.6.6
+  get_storage: ^2.1.1
+
+  # HTTP & Auth
+  dio: ^5.4.3
+  flutter_secure_storage: ^9.0.0
+
+  # 3D Model & AR
+  model_viewer_plus: ^1.7.0
+
+  # Animasi
+  lottie: ^3.1.0
+  flutter_animate: ^4.5.0
+
+  # Media & File
+  image_picker: ^1.0.7
+  flutter_image_compress: ^2.1.0
+  cached_network_image: ^3.3.1
+  photo_view: ^0.14.0
+
+  # UI
+  carousel_slider: ^5.0.0
+  flutter_svg: ^2.0.9
+  shimmer: ^3.0.0
+  smooth_page_indicator: ^1.1.0
+  dotted_border: ^2.1.0
+
+  # Lokasi
+  geolocator: ^11.0.0
+  geocoding: ^3.0.0
+
+  # URL & External
+  url_launcher: ^6.2.5
+
+  # Utility
+  intl: ^0.19.0
+  equatable: ^2.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/lottie/
+
+#  fonts:
+#    - family: Poppins
+#      fonts:
+#        - asset: assets/fonts/Poppins-Regular.ttf
+#        - asset: assets/fonts/Poppins-Medium.ttf
+#          weight: 500
+#        - asset: assets/fonts/Poppins-SemiBold.ttf
+#          weight: 600
+#        - asset: assets/fonts/Poppins-Bold.ttf
+#          weight: 700
+
+fonts:
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/Poppins-Regular.ttf
+      - asset: assets/fonts/Poppins-Medium.ttf
+        weight: 500
+      # ... dan seterusnya
