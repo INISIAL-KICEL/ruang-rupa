@@ -8,6 +8,7 @@ const modelLinks: { label: string; href: string }[] = [
   { label: "New Xforce", href: "/model/xforce" },
   { label: "Destinator", href: "/model/destinator" },
   { label: "Pajero Sport", href: "/model/pajero-sport" },
+  { label: "Xpander Cross", href: "/model/xpander-cross" },
   { label: "Semua Model", href: "/#lineup" },
 ];
 

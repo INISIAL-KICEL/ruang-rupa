@@ -14,6 +14,7 @@ const detailPages: Record<string, string> = {
   xforce: "/model/xforce",
   destinator: "/model/destinator",
   "pajero-sport": "/model/pajero-sport",
+  "xpander-cross": "/model/xpander-cross",
 };
 
 export default function VehicleShowcase() {

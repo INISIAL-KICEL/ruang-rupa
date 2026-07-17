@@ -13,6 +13,7 @@ const detailPages: Record<string, string> = {
   xforce: "/model/xforce",
   destinator: "/model/destinator",
   "pajero-sport": "/model/pajero-sport",
+  "xpander-cross": "/model/xpander-cross",
 };
 
 /** Next.js Link with framer-motion animation support. */
