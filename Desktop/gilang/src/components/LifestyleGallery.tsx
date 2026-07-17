@@ -4,8 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const lifestyleShots = [
-  { src: "/gallery/xforce-lifestyle-1.jpg", caption: "New Xforce Adventure" },
-  { src: "/gallery/xforce-lifestyle-2.jpg", caption: "Xforce di Mitsubishi Serang" },
+  { src: "/gallery/xforce-lifestyle-1.jpg", caption: "Pengalaman Berkendara" },
+  { src: "/gallery/xforce-lifestyle-2.jpg", caption: "Xforce di Serang" },
+  { src: "/gallery/xforce-lifestyle-3.jpg", caption: "Kenyamanan Interior" },
+  { src: "/gallery/xforce-lifestyle-4.jpg", caption: "Test Drive Experience" },
+  { src: "/gallery/xforce-lifestyle-5.jpg", caption: "Kepuasan Pelanggan" },
+  { src: "/gallery/xforce-lifestyle-6.jpg", caption: "Layanan Terbaik" },
 ];
 
 export default function LifestyleGallery() {
@@ -30,7 +34,7 @@ export default function LifestyleGallery() {
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {lifestyleShots.map((s, i) => (
             <motion.figure
               key={s.src}
