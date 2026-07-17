@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Mitsubishi Serang — Design System (Tailwind v4 @theme)
+   Primary Red #DC0000 · Deep Black #111111 · Silver #F5F5F7
+   ============================================================ */
+@theme {
+  --color-mitsu-red: #dc0000;
+  --color-mitsu-red-dark: #b00000;
+  --color-mitsu-black: #111111;
+  --color-mitsu-ink: #1c1c1e;
+  --color-mitsu-silver: #f5f5f7;
+  --color-mitsu-gray: #86868b;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-luxe: 0 20px 60px -15px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 8px 30px -12px rgba(0, 0, 0, 0.18);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Decorative dot grid for dark sections */
+.bg-dotgrid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Animated gradient shine sweeping across text/buttons */
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+.text-shine {
+  background: linear-gradient(100deg, #dc0000 20%, #ff5a5a 45%, #dc0000 70%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+/* Slow float for hero accents */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* Scroll cue */
+@keyframes scrollcue {
+  0% { transform: translateY(0); opacity: 0; }
+  40% { opacity: 1; }
+  80% { transform: translateY(10px); opacity: 0; }
+  100% { opacity: 0; }
+}
+.animate-scrollcue {
+  animation: scrollcue 1.8s ease-in-out infinite;
+}
+
+.gradient-hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(220, 0, 0, 0.22), transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(220, 0, 0, 0.1), transparent 40%),
+    linear-gradient(160deg, #000000 0%, #111111 55%, #1c1c1e 100%);
+}
+
+.gradient-red {
+  background: linear-gradient(135deg, #dc0000 0%, #b00000 100%);
+}
+
+/* Custom range slider for the credit simulator */
+input[type="range"].mitsu-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  outline: none;
+}
+input[type="range"].mitsu-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: #dc0000;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(220, 0, 0, 0.4);
+  cursor: pointer;
+}
+input[type="range"].mitsu-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: #dc0000;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(220, 0, 0, 0.4);
+  cursor: pointer;
+}
