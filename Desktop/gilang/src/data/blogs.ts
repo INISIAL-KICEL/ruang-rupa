@@ -1289,7 +1289,7 @@ New Xforce HEV bukan hanya mobil SUV biasa. Ini adalah perpaduan sempurna antara
 **Info & Test Drive:**
 Hubungi Mitsubishi Dipo Serang untuk pengalaman berkendara yang tak terlupakan.`,
     category: "Mitsubishi",
-    image: "https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/cars/xforce-hev-featured.webp",
     author: "Tim Mitsubishi Serang",
     date: "2025-07-09",
     readTime: 13,
