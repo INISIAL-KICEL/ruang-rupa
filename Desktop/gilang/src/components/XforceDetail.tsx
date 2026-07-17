@@ -49,35 +49,53 @@ export default function XforceDetail() {
 
   return (
     <>
-      {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-mitsu-black pt-24 pb-0 sm:pt-28">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      {/* ===== HERO — full-bleed brochure banner ===== */}
+      <section className="relative h-[85vh] min-h-[560px] w-full overflow-hidden bg-mitsu-black">
+        {/* Full background image */}
+        <Image
+          src="/cars/xforce-hev-featured.webp"
+          alt="New Xforce HEV"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Gradient overlays for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-mitsu-black/90 via-mitsu-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-mitsu-black via-transparent to-mitsu-black/40" />
+
+        {/* Back link */}
+        <div className="absolute inset-x-0 top-0 z-20 mx-auto max-w-7xl px-5 pt-24 lg:px-8 sm:pt-28">
           <Link
             href="/#lineup"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-white mb-6 transition-colors text-sm"
+            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
           >
             <ArrowLeft className="h-4 w-4" />
             Kembali ke Lineup
           </Link>
+        </div>
 
-          <div className="grid items-center gap-8 lg:grid-cols-2">
+        {/* Content overlay */}
+        <div className="absolute inset-0 z-10 flex items-center">
+          <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="max-w-xl"
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-mitsu-red px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
                 <Sparkles className="h-3.5 w-3.5" /> New Xforce
               </span>
-              <h1 className="mt-5 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
-                Elevated Urban SUV
+              <h1 className="mt-5 text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
+                Elevated<br />Urban SUV
               </h1>
-              <p className="mt-5 max-w-md text-base leading-relaxed text-white/70">
+              <p className="mt-6 max-w-md text-base leading-relaxed text-white/80 drop-shadow">
                 SUV 5-seater dengan kabin ternyaman di kelasnya, kini hadir dengan
                 teknologi Hybrid Electric Vehicle (HEV) dan Frameless Panoramic Roof.
               </p>
-              <p className="mt-6 text-sm text-white/50">Mulai dari</p>
-              <p className="text-3xl font-black text-mitsu-red">
+              <p className="mt-8 text-sm text-white/60">Mulai dari</p>
+              <p className="text-4xl font-black text-white drop-shadow-lg">
                 {formatRupiah(xforceVariants[0].price)}
               </p>
 
@@ -86,7 +104,7 @@ export default function XforceDetail() {
                   href={brochureLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-mitsu-black transition-transform hover:scale-[1.03]"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-mitsu-black transition-transform hover:scale-[1.03] shadow-xl"
                 >
                   <Download className="h-4 w-4" />
                   Unduh Brosur
@@ -95,28 +113,12 @@ export default function XforceDetail() {
                   href={testDriveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full gradient-red px-6 py-3 text-sm font-bold text-white transition-transform hover:scale-[1.03]"
+                  className="inline-flex items-center gap-2 rounded-full gradient-red px-7 py-3.5 text-sm font-bold text-white transition-transform hover:scale-[1.03] shadow-xl"
                 >
                   <CalendarClock className="h-4 w-4" />
                   Test Drive
                 </a>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="relative aspect-video w-full"
-            >
-              <Image
-                src="/cars/xforce-hev-featured.webp"
-                alt="New Xforce HEV"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-cover rounded-t-2xl"
-              />
             </motion.div>
           </div>
         </div>
