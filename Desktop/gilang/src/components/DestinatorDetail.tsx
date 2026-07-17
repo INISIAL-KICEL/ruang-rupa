@@ -123,10 +123,15 @@ export default function DestinatorDetail() {
               transition={{ duration: 0.7 }}
               className="max-w-xl"
             >
-              <span className="inline-flex items-center gap-2 rounded-full bg-mitsu-red px-3 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">
-                Destinator
-              </span>
-              <h1 className="mt-4 text-4xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
+              <Image
+                src="/logo/destinator-logo.png"
+                alt="Destinator"
+                width={384}
+                height={27}
+                priority
+                className="h-6 w-auto sm:h-8 drop-shadow-lg"
+              />
+              <h1 className="mt-5 text-4xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
                 SUV Tangguh<br />Penuh Karakter
               </h1>
               <p className="mt-4 sm:mt-6 max-w-md text-sm sm:text-base leading-relaxed text-white/80 drop-shadow">
