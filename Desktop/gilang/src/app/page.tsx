@@ -14,7 +14,7 @@ import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import BookingForm from "@/components/BookingForm";
 import CreditSimulator from "@/components/CreditSimulator";
-import Blog from "@/components/Blog";
+import LatestBlog from "@/components/LatestBlog";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -40,7 +40,7 @@ export default function Home() {
         <Testimonials />
         <BookingForm />
         <CreditSimulator />
-        <Blog />
+        <LatestBlog />
         <Faq />
       </main>
       <Footer />

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Mitsubishi Serang | Tips Perawatan & Informasi Kendaraan</title>
+    <meta name="description" content="Baca blog Mitsubishi Serang untuk tips perawatan mobil, panduan berkendara, dan informasi terbaru produk Mitsubishi.">
+    <meta name="keywords" content="blog Mitsubishi, tips perawatan mobil, cara merawat kendaraan, maintenance mobil">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --mitsu-red: #E41E24;
+            --mitsu-black: #1a1a1a;
+            --mitsu-gray: #6b7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--mitsu-black);
+            background-color: #f9fafb;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--mitsu-black) 0%, #333 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .search-bar button {
+            padding: 12px 24px;
+            background: var(--mitsu-red);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-bar button:hover {
+            background: #c41820;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--mitsu-red);
+            color: var(--mitsu-red);
+            background: #fff5f5;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .blog-card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .category-perawatan { background: #dbeafe; color: #1e40af; }
+        .category-tips { background: #dcfce7; color: #166534; }
+        .category-mitsubishi { background: #fee2e2; color: #991b1b; }
+        .category-lifestyle { background: #f3e8ff; color: #6b21a8; }
+
+        .blog-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: var(--mitsu-black);
+        }
+
+        .blog-card p {
+            color: var(--mitsu-gray);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: var(--mitsu-gray);
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--mitsu-red);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: gap 0.3s;
+        }
+
+        .read-more:hover {
+            gap: 12px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--mitsu-black) 0%, var(--mitsu-red) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 16px;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: white;
+            color: var(--mitsu-red);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: var(--mitsu-black);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--mitsu-gray);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📰 Blog Mitsubishi Serang</h1>
+        <p>Tips perawatan mobil, panduan berkendara, dan informasi terbaru</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Cari artikel..." onkeyup="filterBlogs()">
+            <button onclick="filterBlogs()">Cari</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterByCategory('Semua')">Semua (15)</button>
+            <button class="filter-btn" onclick="filterByCategory('Perawatan')">Perawatan (5)</button>
+            <button class="filter-btn" onclick="filterByCategory('Tips')">Tips (4)</button>
+            <button class="filter-btn" onclick="filterByCategory('Mitsubishi')">Mitsubishi (2)</button>
+            <button class="filter-btn" onclick="filterByCategory('Lifestyle')">Lifestyle (0)</button>
+        </div>
+
+        <div class="blog-grid" id="blogGrid"></div>
+
+        <div class="cta-section">
+            <h2>Kunjungi Blog Lengkap</h2>
+            <p>Baca semua artikel dan dapatkan tips perawatan mobil terbaru</p>
+            <a href="/" class="cta-btn">Kembali ke Website → </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mitsubishi Dipo Serang. Dealer Resmi Mitsubishi untuk Serang, Cilegon & sekitarnya.</p>
+    </footer>
+
+    <script>
+        const blogs = [
+            {
+                title: "Cara Merawat Mesin Mobil yang Baik dan Benar",
+                category: "Perawatan",
+                image: "https://images.unsplash.com/photo-1488824849503-c93d5d4fbf45?w=600&h=400&fit=crop",
+                excerpt: "Panduan lengkap merawat mesin kendaraan Anda agar tetap prima dan tahan lama.",
+                readTime: 5,
+                date: "15 Jul 2025"
+            },
+            {
+                title: "Pentingnya Pengecekan Ban Mobil Berkala",
+                category: "Perawatan",
+                image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+                excerpt: "Ban yang baik adalah kunci keselamatan berkendara. Pelajari cara merawat dan memeriksa kondisi ban.",
+                readTime: 4,
+                date: "14 Jul 2025"
+            },
+            {
+                title: "Memahami dan Merawat Sistem Pendingin Mobil",
+                category: "Perawatan",
+                image: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&h=400&fit=crop",
+                excerpt: "Sistem pendingin yang baik mencegah mesin overheating. Ketahui cara merawatnya dengan benar.",
+                readTime: 5,
+                date: "13 Jul 2025"
+            },
+            {
+                title: "Panduan Lengkap Perawatan Aki Mobil",
+                category: "Perawatan",
+                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+                excerpt: "Aki yang sehat memastikan mobil selalu mudah dihidupkan. Pelajari cara merawat aki dengan tepat.",
+                readTime: 4,
+                date: "12 Jul 2025"
+            },
+            {
+                title: "Tips Berkendara Hemat Bahan Bakar",
+                category: "Tips",
+                image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&h=400&fit=crop",
+                excerpt: "Hemat bahan bakar dengan teknik berkendara yang efisien dan perawatan rutin.",
+                readTime: 5,
+                date: "11 Jul 2025"
+            },
+            {
+                title: "Jadwal Servis Berkala Mobil yang Tepat",
+                category: "Perawatan",
+                image: "https://images.unsplash.com/photo-1487958449943-ff81aa08d456?w=600&h=400&fit=crop",
+                excerpt: "Servis berkala menjaga performa mobil. Ketahui jadwal servis yang direkomendasikan.",
+                readTime: 4,
+                date: "10 Jul 2025"
+            },
+            {
+                title: "Mengenal Fitur Unggulan New Xforce HEV",
+                category: "Mitsubishi",
+                image: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&h=400&fit=crop",
+                excerpt: "Teknologi terdepan dalam New Xforce memberikan kenyamanan dan efisiensi maksimal.",
+                readTime: 5,
+                date: "09 Jul 2025"
+            },
+            {
+                title: "Persiapan Mobil untuk Musim Hujan",
+                category: "Tips",
+                image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop",
+                excerpt: "Siapkan mobil Anda menghadapi musim hujan dengan perawatan yang tepat.",
+                readTime: 4,
+                date: "08 Jul 2025"
+            },
+            {
+                title: "Memahami Arti Lampu-Lampu di Dashboard",
+                category: "Tips",
+                image: "https://images.unsplash.com/photo-1485291571255-e42f38d12b26?w=600&h=400&fit=crop",
+                excerpt: "Ketahui arti setiap lampu di dashboard untuk mendeteksi masalah lebih awal.",
+                readTime: 4,
+                date: "07 Jul 2025"
+            },
+            {
+                title: "Tips Parkir Aman dan Menjaga Kondisi Mobil",
+                category: "Tips",
+                image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&h=400&fit=crop",
+                excerpt: "Parkir yang aman melindungi kendaraan Anda dari kerusakan dan risiko keselamatan.",
+                readTime: 4,
+                date: "06 Jul 2025"
+            },
+            {
+                title: "Mengapa Memilih Bengkel Resmi Mitsubishi",
+                category: "Mitsubishi",
+                image: "https://images.unsplash.com/photo-1486262715619-67b519e0adf4?w=600&h=400&fit=crop",
+                excerpt: "Bengkel resmi menjamin kualitas servis dan penggunaan suku cadang original.",
+                readTime: 4,
+                date: "05 Jul 2025"
+            },
+            {
+                title: "Panduan Merawat Interior Mobil Tetap Bersih",
+                category: "Perawatan",
+                image: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&h=400&fit=crop",
+                excerpt: "Interior yang terawat meningkatkan kenyamanan dan nilai jual kendaraan.",
+                readTime: 4,
+                date: "04 Jul 2025"
+            },
+            {
+                title: "Perlengkapan Emergency yang Wajib Dibawa",
+                category: "Tips",
+                image: "https://images.unsplash.com/photo-1595432707802-e46b1b5f0c3b?w=600&h=400&fit=crop",
+                excerpt: "Emergency kit yang lengkap bisa menyelamatkan situasi darurat saat berkendara.",
+                readTime: 5,
+                date: "03 Jul 2025"
+            },
+            {
+                title: "Checklist Persiapan Perjalanan Jauh dengan Mobil",
+                category: "Tips",
+                image: "https://images.unsplash.com/photo-1527824050519-7cc8d92f37b8?w=600&h=400&fit=crop",
+                excerpt: "Persiapan yang matang memastikan perjalanan jauh yang aman dan nyaman.",
+                readTime: 5,
+                date: "02 Jul 2025"
+            },
+            {
+                title: "Memahami Teknologi Hybrid dan Kelebihannya",
+                category: "Mitsubishi",
+                image: "https://images.unsplash.com/photo-1554744512-d2c14020371e?w=600&h=400&fit=crop",
+                excerpt: "Teknologi hybrid menggabungkan mesin bensin dan listrik untuk efisiensi maksimal.",
+                readTime: 6,
+                date: "01 Jul 2025"
+            }
+        ];
+
+        let currentCategory = 'Semua';
+        let currentSearch = '';
+
+        function renderBlogs(filtered) {
+            const grid = document.getElementById('blogGrid');
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="no-results">Tidak ada artikel yang ditemukan</div>';
+                return;
+            }
+
+            grid.innerHTML = filtered.map(blog => `
+                <div class="blog-card">
+                    <img src="${blog.image}" alt="${blog.title}" onerror="this.src='https://via.placeholder.com/600x400?text=Blog+Image'">
+                    <div class="blog-card-content">
+                        <span class="category-badge category-${blog.category.toLowerCase()}">${blog.category}</span>
+                        <h3>${blog.title}</h3>
+                        <p>${blog.excerpt}</p>
+                        <div class="blog-meta">
+                            <span>⏱️ ${blog.readTime} min baca</span>
+                            <span>📅 ${blog.date}</span>
+                        </div>
+                        <a href="/blog" class="read-more">Baca selengkapnya →</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterByCategory(category) {
+            currentCategory = category;
+            currentSearch = document.getElementById('searchInput').value;
+            updateFilter();
+
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function filterBlogs() {
+            currentSearch = document.getElementById('searchInput').value.toLowerCase();
+            updateFilter();
+        }
+
+        function updateFilter() {
+            let filtered = blogs;
+
+            if (currentCategory !== 'Semua') {
+                filtered = filtered.filter(b => b.category === currentCategory);
+            }
+
+            if (currentSearch) {
+                filtered = filtered.filter(b =>
+                    b.title.toLowerCase().includes(currentSearch) ||
+                    b.excerpt.toLowerCase().includes(currentSearch)
+                );
+            }
+
+            renderBlogs(filtered);
+        }
+
+        // Initial render
+        renderBlogs(blogs);
+    </script>
+</body>
+</html>
