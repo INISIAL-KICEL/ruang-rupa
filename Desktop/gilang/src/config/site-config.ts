@@ -41,14 +41,14 @@ export const siteConfig = {
 
   /** Dealer / showroom location for maps & directions. */
   location: {
-    label: "Mitsubishi Motors DIPO Serang Pusat",
-    lat: -6.128,
-    lng: 106.1189,
+    label: "Mitsubishi Dipo Serang",
+    lat: -6.1208761,
+    lng: 106.1782434,
     /** Short link to the exact Google Business listing. */
-    mapsUrl: "https://maps.app.goo.gl/xKq7yNTWFo84dT7g7",
-    /** Query-based embed centered on the business listing. */
+    mapsUrl: "https://maps.app.goo.gl/7P35UkNjd5XxDMtV6",
+    /** Coordinate-based embed centered on the showroom. */
     embedUrl:
-      "https://maps.google.com/maps?q=Mitsubishi%20Motors%20DIPO%20Serang%20Pusat%2C%20Jl.%20Raya%20Cilegon%20Drangong%20KM%204%2C%20Taktakan%2C%20Serang&z=16&output=embed",
+      "https://maps.google.com/maps?q=-6.1208761,106.1782434&z=16&output=embed",
   },
 
   nav: [
