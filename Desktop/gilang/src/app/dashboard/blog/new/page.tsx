@@ -62,7 +62,7 @@ export default function NewBlogPost() {
                   Artikel Baru
                 </h1>
                 <p className="text-sm text-gray-500">
-                  Buat artikel blog terbaru untuk Mitsubishi Serang
+                  Buat artikel blog terbaru untuk Mitsubishi Dipo Serang
                 </p>
               </div>
             </div>

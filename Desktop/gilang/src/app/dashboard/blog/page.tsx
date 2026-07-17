@@ -54,7 +54,7 @@ export default function BlogDashboard() {
             <div>
               <h1 className="text-3xl font-bold text-gray-900">Blog Dashboard</h1>
               <p className="mt-1 text-sm text-gray-500">
-                Kelola semua artikel blog Mitsubishi Serang
+                Kelola semua artikel blog Mitsubishi Dipo Serang
               </p>
             </div>
             <Link

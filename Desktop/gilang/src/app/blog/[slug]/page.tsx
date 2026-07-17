@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props) {
   }
 
   return {
-    title: `${blog.title} | Mitsubishi Serang`,
+    title: `${blog.title} | Mitsubishi Dipo Serang`,
     description: blog.excerpt,
     keywords: blog.seoKeywords.join(", "),
     openGraph: {
@@ -115,8 +115,8 @@ export default async function BlogDetail({ params }: Props) {
           </div>
         </section>
 
-        {/* Featured Image */}
-        <section className="relative h-96 w-full bg-black sm:h-[500px] lg:h-[600px]">
+        {/* Featured Image - 16:9 Aspect Ratio */}
+        <section className="relative w-full bg-black aspect-video">
           <Image
             src={blog.image}
             alt={blog.title}
@@ -188,7 +188,7 @@ export default async function BlogDetail({ params }: Props) {
               <div className="flex gap-4 flex-wrap">
                 <a
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                    `https://mitsubishi-serang.com/blog/${blog.slug}`,
+                    `https://www.mitsubishidiposerang.com/blog/${blog.slug}`,
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -199,9 +199,9 @@ export default async function BlogDetail({ params }: Props) {
                 </a>
                 <a
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                    `${blog.title} - Mitsubishi Serang`,
+                    `${blog.title} - Mitsubishi Dipo Serang`,
                   )}&url=${encodeURIComponent(
-                    `https://mitsubishi-serang.com/blog/${blog.slug}`,
+                    `https://www.mitsubishidiposerang.com/blog/${blog.slug}`,
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -212,7 +212,7 @@ export default async function BlogDetail({ params }: Props) {
                 </a>
                 <a
                   href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                    `${blog.title} - Mitsubishi Serang https://mitsubishi-serang.com/blog/${blog.slug}`,
+                    `${blog.title} - Mitsubishi Dipo Serang https://www.mitsubishidiposerang.com/blog/${blog.slug}`,
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -234,7 +234,7 @@ export default async function BlogDetail({ params }: Props) {
                 Tentang Penulis
               </h3>
               <p className="text-mitsu-gray mb-6 leading-relaxed text-base">
-                {blog.author} adalah bagian dari tim expert Mitsubishi Serang yang
+                {blog.author} adalah bagian dari tim expert Mitsubishi Dipo Serang yang
                 berkomitmen untuk memberikan informasi dan layanan terbaik kepada
                 pelanggan setia Mitsubishi.
               </p>
@@ -260,12 +260,12 @@ export default async function BlogDetail({ params }: Props) {
                     href={`/blog/${relatedBlog.slug}`}
                     className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                   >
-                    <div className="relative aspect-video w-full overflow-hidden bg-mitsu-gray/20">
+                    <div className="relative w-full bg-mitsu-gray/20 aspect-video">
                       <Image
                         src={relatedBlog.image}
                         alt={relatedBlog.title}
                         fill
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>

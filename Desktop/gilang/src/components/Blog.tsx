@@ -28,7 +28,7 @@ export default function Blog() {
             Artikel &amp; Tips Perawatan
           </span>
           <h2 className="mt-3 text-3xl font-black tracking-tight text-mitsu-black sm:text-4xl">
-            Blog Mitsubishi Serang
+            Blog Mitsubishi Dipo Serang
           </h2>
           <p className="mt-4 text-base text-mitsu-gray">
             Tips perawatan mobil, informasi terbaru Mitsubishi, dan panduan berkendara yang aman dan nyaman.

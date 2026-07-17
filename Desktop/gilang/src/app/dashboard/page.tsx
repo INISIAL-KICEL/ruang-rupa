@@ -5,7 +5,7 @@ export default function DashboardHome() {
   const sections = [
     {
       title: "Blog Management",
-      description: "Kelola semua artikel blog Mitsubishi Serang",
+      description: "Kelola semua artikel blog Mitsubishi Dipo Serang",
       icon: BookOpen,
       href: "/dashboard/blog",
       color: "bg-blue-50 text-blue-600",
@@ -19,7 +19,7 @@ export default function DashboardHome() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
           <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
           <p className="mt-1 text-sm text-gray-500">
-            Kelola konten Mitsubishi Serang
+            Kelola konten Mitsubishi Dipo Serang
           </p>
         </div>
       </div>

@@ -8,8 +8,8 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export const metadata: Metadata = {
-  title: "Blog Mitsubishi Serang | Tips Perawatan & Informasi Kendaraan",
-  description: "Baca blog Mitsubishi Serang untuk tips perawatan mobil, panduan berkendara, dan informasi terbaru produk Mitsubishi.",
+  title: "Blog Mitsubishi Dipo Serang | Tips Perawatan & Informasi Kendaraan",
+  description: "Baca blog Mitsubishi Dipo Serang untuk tips perawatan mobil, panduan berkendara, dan informasi terbaru produk Mitsubishi.",
   keywords: [
     "blog Mitsubishi",
     "tips perawatan mobil",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "keselamatan berkendara",
   ],
   openGraph: {
-    title: "Blog Mitsubishi Serang",
+    title: "Blog Mitsubishi Dipo Serang",
     description: "Tips perawatan mobil dan informasi terbaru Mitsubishi",
     type: "website",
   },
@@ -59,7 +59,7 @@ export default function BlogPage() {
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4">
-                Blog Mitsubishi Serang
+                Blog Mitsubishi Dipo Serang
               </h1>
               <p className="text-lg text-white/80 mb-8">
                 Tips perawatan mobil, panduan berkendara, dan informasi terbaru tentang
@@ -106,13 +106,13 @@ export default function BlogPage() {
                   href={`/blog/${blog.slug}`}
                   className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                 >
-                  {/* Image */}
-                  <div className="relative aspect-video w-full overflow-hidden bg-mitsu-gray/20">
+                  {/* Image - 16:9 Aspect Ratio */}
+                  <div className="relative w-full bg-mitsu-gray/20 aspect-video">
                     <Image
                       src={blog.image}
                       alt={blog.title}
                       fill
-                      sizes="(max-width: 640px) 100vw, 50vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>

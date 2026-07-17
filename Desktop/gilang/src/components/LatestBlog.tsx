@@ -139,13 +139,13 @@ export default function LatestBlog() {
               transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
               className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              {/* Image Container */}
-              <div className="relative aspect-video w-full overflow-hidden bg-gray-200">
+              {/* Image Container - 16:9 Aspect Ratio */}
+              <div className="relative w-full bg-gray-200 aspect-video">
                 <Image
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   priority={index < 2}
                 />
