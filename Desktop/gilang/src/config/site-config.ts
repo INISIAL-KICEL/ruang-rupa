@@ -55,6 +55,7 @@ export const siteConfig = {
     { label: "Tentang", href: "#tentang" },
     { label: "Model", href: "#lineup" },
     { label: "Bandingkan", href: "#bandingkan" },
+    { label: "Blog", href: "#blog" },
     { label: "Test Drive", href: "#test-drive" },
     { label: "Simulasi", href: "#simulasi" },
   ],
