@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.mitsubishiserang.id"),
+  metadataBase: new URL("https://www.mitsubishidiposerang.com"),
   title: {
     default: "Mitsubishi Dipo Serang | Dealer Resmi Serang & Cilegon, Banten",
     template: "%s | Mitsubishi Dipo Serang",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   creator: "Mitsubishi Dipo Serang",
   publisher: "Mitsubishi Dipo Serang",
   category: "automotive",
-  alternates: { canonical: "https://www.mitsubishiserang.id" },
+  alternates: { canonical: "https://www.mitsubishidiposerang.com" },
   robots: {
     index: true,
     follow: true,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Mitsubishi Dipo Serang | Dealer Resmi Banten",
     description:
       "Konsultasi langsung dengan sales executive Mitsubishi Dipo Serang. Promo, simulasi kredit & test drive.",
-    url: "https://www.mitsubishiserang.id",
+    url: "https://www.mitsubishidiposerang.com",
     siteName: siteConfig.brand,
     locale: "id_ID",
     type: "website",

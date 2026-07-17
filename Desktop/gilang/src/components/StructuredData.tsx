@@ -8,7 +8,7 @@ import { faqs } from "@/data/faq";
  * engines and AI assistants can understand and recommend this dealer.
  */
 export default function StructuredData() {
-  const base = "https://www.mitsubishiserang.id";
+  const base = "https://www.mitsubishidiposerang.com";
   const { sales, location, social } = siteConfig;
 
   const dealer = {

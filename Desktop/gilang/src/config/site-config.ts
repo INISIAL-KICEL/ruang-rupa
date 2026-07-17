@@ -4,7 +4,7 @@
  */
 
 export const siteConfig = {
-  domain: "www.mitsubishiserang.id",
+  domain: "www.mitsubishidiposerang.com",
   brand: "MITSUBISHI DIPO SERANG",
   tagline: "Dealer Resmi Mitsubishi untuk Serang, Cilegon & sekitarnya",
 
