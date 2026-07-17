@@ -102,9 +102,19 @@ export default function XforceDetail() {
               transition={{ duration: 0.7 }}
               className="max-w-xl"
             >
-              <span className="inline-flex items-center gap-2 rounded-full bg-mitsu-red px-3 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">
-                <Sparkles className="h-3.5 w-3.5" /> New Xforce
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="inline-flex items-center gap-2 rounded-full bg-mitsu-red px-3 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">
+                  <Sparkles className="h-3.5 w-3.5" /> New Xforce
+                </span>
+                <Image
+                  src="/logo/xforce-hev-logo.png"
+                  alt="HEV"
+                  width={550}
+                  height={219}
+                  priority
+                  className="h-8 w-auto sm:h-10 drop-shadow-lg"
+                />
+              </div>
               <h1 className="mt-4 text-4xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
                 Elevated<br />Urban SUV
               </h1>
