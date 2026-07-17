@@ -1,6 +1,14 @@
 import Image from "next/image";
-import { MapPin, Phone, Mail, MessageCircle, Navigation } from "lucide-react";
+import Link from "next/link";
+import { MapPin, Phone, Mail, MessageCircle, Navigation, ChevronRight } from "lucide-react";
 import { getWaLink, siteConfig } from "@/config/site-config";
+
+/** Model shortcuts — pages with a dedicated detail page, plus the lineup anchor. */
+const modelLinks: { label: string; href: string }[] = [
+  { label: "New Xforce", href: "/model/xforce" },
+  { label: "Destinator", href: "/model/destinator" },
+  { label: "Semua Model", href: "/#lineup" },
+];
 
 type IconProps = { className?: string };
 
@@ -63,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto max-w-7xl px-5 pb-28 pt-14 lg:px-8 lg:pb-14">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5">
@@ -107,11 +115,29 @@ export default function Footer() {
               {siteConfig.nav.map((item) => (
                 <li key={item.href}>
                   <a
-                    href={item.href}
+                    href={item.href.startsWith("#") ? `/${item.href}` : item.href}
                     className="transition-colors hover:text-mitsu-red"
                   >
                     {item.label}
                   </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Model shortcuts */}
+          <div>
+            <h4 className="text-sm font-semibold text-white">Model</h4>
+            <ul className="mt-4 space-y-2 text-sm">
+              {modelLinks.map((m) => (
+                <li key={m.href}>
+                  <Link
+                    href={m.href}
+                    className="group inline-flex items-center gap-1.5 transition-colors hover:text-mitsu-red"
+                  >
+                    <ChevronRight className="h-3.5 w-3.5 text-mitsu-red transition-transform group-hover:translate-x-0.5" />
+                    {m.label}
+                  </Link>
                 </li>
               ))}
             </ul>

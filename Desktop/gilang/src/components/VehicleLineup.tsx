@@ -11,6 +11,7 @@ import { getWaLink, siteConfig } from "@/config/site-config";
 /** Models that have a dedicated detail page (linked instead of WA). */
 const detailPages: Record<string, string> = {
   xforce: "/model/xforce",
+  destinator: "/model/destinator",
 };
 
 /** Next.js Link with framer-motion animation support. */

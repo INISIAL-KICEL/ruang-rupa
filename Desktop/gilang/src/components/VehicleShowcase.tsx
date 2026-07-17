@@ -12,6 +12,7 @@ import Dropdown from "@/components/Dropdown";
 /** Models with a dedicated detail page. */
 const detailPages: Record<string, string> = {
   xforce: "/model/xforce",
+  destinator: "/model/destinator",
 };
 
 export default function VehicleShowcase() {

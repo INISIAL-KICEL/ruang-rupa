@@ -68,7 +68,7 @@ export default function XforceDetail() {
   return (
     <>
       {/* ===== HERO — full-bleed brochure banner ===== */}
-      <section className="relative h-[85vh] min-h-[560px] w-full overflow-hidden bg-mitsu-black">
+      <section className="relative min-h-[600px] h-[80svh] w-full overflow-hidden bg-mitsu-black">
         {/* Full background image */}
         <Image
           src="/cars/xforce-hev-featured.webp"
@@ -102,22 +102,22 @@ export default function XforceDetail() {
               transition={{ duration: 0.7 }}
               className="max-w-xl"
             >
-              <span className="inline-flex items-center gap-2 rounded-full bg-mitsu-red px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+              <span className="inline-flex items-center gap-2 rounded-full bg-mitsu-red px-3 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">
                 <Sparkles className="h-3.5 w-3.5" /> New Xforce
               </span>
-              <h1 className="mt-5 text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
+              <h1 className="mt-4 text-4xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
                 Elevated<br />Urban SUV
               </h1>
-              <p className="mt-6 max-w-md text-base leading-relaxed text-white/80 drop-shadow">
+              <p className="mt-4 sm:mt-6 max-w-md text-sm sm:text-base leading-relaxed text-white/80 drop-shadow">
                 SUV 5-seater dengan kabin ternyaman di kelasnya, kini hadir dengan
                 teknologi Hybrid Electric Vehicle (HEV) dan Frameless Panoramic Roof.
               </p>
-              <p className="mt-8 text-sm text-white/60">Mulai dari</p>
-              <p className="text-4xl font-black text-white drop-shadow-lg">
+              <p className="mt-6 sm:mt-8 text-sm text-white/60">Mulai dari</p>
+              <p className="text-3xl sm:text-4xl font-black text-white drop-shadow-lg">
                 {formatRupiah(xforceStartingPrice)}
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
                 <a
                   href={brochureFile}
                   download
@@ -240,7 +240,7 @@ export default function XforceDetail() {
             </div>
 
             {/* RIGHT: info panel */}
-            <div className="flex flex-col justify-center border-t border-black/5 p-8 lg:border-l lg:border-t-0">
+            <div className="flex flex-col justify-center border-t border-black/5 p-6 sm:p-8 lg:border-l lg:border-t-0">
               <h3 className="text-2xl font-black text-mitsu-black">New Xforce</h3>
               <p className="mt-1 text-lg font-semibold text-mitsu-gray">
                 {activeVariant.label}

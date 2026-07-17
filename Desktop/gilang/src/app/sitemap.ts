@@ -23,12 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Dedicated model detail pages.
-  entries.push({
-    url: `${base}/model/xforce`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.9,
-  });
+  for (const slug of ["xforce", "destinator"]) {
+    entries.push({
+      url: `${base}/model/${slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    });
+  }
 
   return entries;
 }
