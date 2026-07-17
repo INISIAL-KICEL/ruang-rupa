@@ -74,28 +74,28 @@ export default async function BlogDetail({ params }: Props) {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-mitsu-black py-12">
+        <section className="bg-mitsu-black py-20 sm:py-28 lg:py-32 mt-16">
           <div className="mx-auto max-w-4xl px-5 lg:px-8">
             <Link
               href="/#blog"
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white mb-6 transition-colors"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white mb-8 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
               Kembali ke Blog
             </Link>
 
-            <div className="mb-8">
+            <div className="mb-12 space-y-6">
               <span
-                className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold mb-4 ${
+                className={`inline-flex rounded-full px-4 py-2 text-xs font-semibold ${
                   categoryColors[blog.category] || categoryColors.Perawatan
                 }`}
               >
                 {blog.category}
               </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white mb-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-white">
                 {blog.title}
               </h1>
-              <div className="flex flex-wrap items-center gap-4 text-white/60 text-sm">
+              <div className="flex flex-wrap items-center gap-6 text-white/60 text-sm">
                 <span>{blog.author}</span>
                 <span>•</span>
                 <time dateTime={blog.date}>
@@ -116,7 +116,7 @@ export default async function BlogDetail({ params }: Props) {
         </section>
 
         {/* Featured Image */}
-        <section className="relative h-96 w-full bg-black sm:h-[500px]">
+        <section className="relative h-96 w-full bg-black sm:h-[500px] lg:h-[600px]">
           <Image
             src={blog.image}
             alt={blog.title}
@@ -128,28 +128,28 @@ export default async function BlogDetail({ params }: Props) {
         </section>
 
         {/* Content */}
-        <section className="bg-white py-12 sm:py-16 lg:py-20">
+        <section className="bg-white py-16 sm:py-24 lg:py-32">
           <div className="mx-auto max-w-4xl px-5 lg:px-8">
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none space-y-6">
               <Markdown
                 components={{
                   h2: ({node, ...props}) => (
-                    <h2 className="mt-8 mb-4 text-2xl font-bold text-mitsu-black" {...props} />
+                    <h2 className="mt-12 mb-6 text-3xl font-bold text-mitsu-black pt-4" {...props} />
                   ),
                   h3: ({node, ...props}) => (
-                    <h3 className="mt-6 mb-3 text-xl font-bold text-mitsu-black" {...props} />
+                    <h3 className="mt-10 mb-5 text-2xl font-bold text-mitsu-black pt-2" {...props} />
                   ),
                   p: ({node, ...props}) => (
-                    <p className="mb-4 text-mitsu-gray leading-relaxed text-base" {...props} />
+                    <p className="mb-6 text-mitsu-gray leading-relaxed text-base" {...props} />
                   ),
                   ul: ({node, ...props}) => (
-                    <ul className="list-disc list-inside mb-4 ml-4 space-y-2" {...props} />
+                    <ul className="list-disc list-inside mb-6 ml-6 space-y-3" {...props} />
                   ),
                   li: ({node, ...props}) => (
                     <li className="text-mitsu-gray text-base" {...props} />
                   ),
                   ol: ({node, ...props}) => (
-                    <ol className="list-decimal list-inside mb-4 ml-4 space-y-2" {...props} />
+                    <ol className="list-decimal list-inside mb-6 ml-6 space-y-3" {...props} />
                   ),
                   strong: ({node, ...props}) => (
                     <strong className="font-bold text-mitsu-black" {...props} />
@@ -164,7 +164,7 @@ export default async function BlogDetail({ params }: Props) {
             </div>
 
             {/* Keywords */}
-            <div className="mt-12 border-t border-mitsu-gray/20 pt-8">
+            <div className="mt-16 border-t border-mitsu-gray/20 pt-12">
               <p className="text-sm font-semibold text-mitsu-black mb-3">
                 Tag artikel:
               </p>
@@ -181,11 +181,11 @@ export default async function BlogDetail({ params }: Props) {
             </div>
 
             {/* Share */}
-            <div className="mt-8 border-t border-mitsu-gray/20 pt-8">
-              <p className="text-sm font-semibold text-mitsu-black mb-4">
+            <div className="mt-16 border-t border-mitsu-gray/20 pt-12">
+              <p className="text-sm font-semibold text-mitsu-black mb-6">
                 Bagikan artikel:
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-4 flex-wrap">
                 <a
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
                     `https://mitsubishi-serang.com/blog/${blog.slug}`,
@@ -227,18 +227,18 @@ export default async function BlogDetail({ params }: Props) {
         </section>
 
         {/* Author Info */}
-        <section className="bg-mitsu-gray/5 py-12">
+        <section className="bg-mitsu-gray/5 py-16 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-4xl px-5 lg:px-8">
-            <div className="rounded-2xl bg-white p-8 shadow-card">
-              <h3 className="text-xl font-bold text-mitsu-black mb-2">
+            <div className="rounded-2xl bg-white p-10 shadow-card">
+              <h3 className="text-2xl font-bold text-mitsu-black mb-4">
                 Tentang Penulis
               </h3>
-              <p className="text-mitsu-gray mb-4">
+              <p className="text-mitsu-gray mb-6 leading-relaxed text-base">
                 {blog.author} adalah bagian dari tim expert Mitsubishi Serang yang
                 berkomitmen untuk memberikan informasi dan layanan terbaik kepada
                 pelanggan setia Mitsubishi.
               </p>
-              <p className="text-sm text-mitsu-gray">
+              <p className="text-base text-mitsu-gray leading-relaxed">
                 Untuk konsultasi dan informasi lebih lanjut, hubungi showroom Mitsubishi
                 Serang melalui WhatsApp atau kunjungi langsung.
               </p>
@@ -248,9 +248,9 @@ export default async function BlogDetail({ params }: Props) {
 
         {/* Related Articles */}
         {relatedBlogs.length > 0 && (
-          <section className="py-12 sm:py-16 lg:py-20">
+          <section className="py-16 sm:py-24 lg:py-28 bg-white">
             <div className="mx-auto max-w-7xl px-5 lg:px-8">
-              <h3 className="mb-10 text-3xl font-black text-mitsu-black">
+              <h3 className="mb-14 text-3xl sm:text-4xl font-black text-mitsu-black">
                 Artikel Terkait
               </h3>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
