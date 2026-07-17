@@ -164,7 +164,7 @@ Mesin yang terawat bukan hanya tentang performa, tetapi juga tentang keselamatan
 
 **Ingat: Pencegahan selalu lebih murah daripada perbaikan!**`,
     category: "Perawatan",
-    image: "https://picsum.photos/seed/engine/600/400",
+    image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-15",
     readTime: 12,
@@ -700,7 +700,7 @@ Aki yang terawat bukan hanya tentang performa, tetapi juga tentang keandalan dan
 
 **Ingat: Aki yang baik adalah teman setia di setiap perjalanan!**`,
     category: "Perawatan",
-    image: "https://picsum.photos/seed/battery/600/400",
+    image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-12",
     readTime: 10,
@@ -909,7 +909,7 @@ Hemat bahan bakar adalah kombinasi dari teknik berkendara yang tepat, perawatan 
 
 **Target realistic:** 15-20% hemat dengan effort minimal, 25-30% dengan disiplin penuh.`,
     category: "Tips",
-    image: "https://picsum.photos/seed/fuel/600/400",
+    image: "https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-11",
     readTime: 12,
@@ -1076,7 +1076,7 @@ Servis berkala yang tepat adalah kunci untuk memiliki mobil yang selalu dalam ko
 
 **Ingat: Servis berkala adalah biaya maintenance kecil untuk mencegah repair besar!**`,
     category: "Perawatan",
-    image: "https://picsum.photos/seed/service/600/400",
+    image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-10",
     readTime: 11,
@@ -1289,7 +1289,7 @@ New Xforce HEV bukan hanya mobil SUV biasa. Ini adalah perpaduan sempurna antara
 **Info & Test Drive:**
 Hubungi Mitsubishi Dipo Serang untuk pengalaman berkendara yang tak terlupakan.`,
     category: "Mitsubishi",
-    image: "https://picsum.photos/seed/xforce/600/400",
+    image: "https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     author: "Tim Mitsubishi Serang",
     date: "2025-07-09",
     readTime: 13,
@@ -1514,7 +1514,7 @@ Persiapan mobil untuk musim hujan bukan hanya tentang teknis, tetapi juga tentan
 
 **Musim hujan aman dimulai dari persiapan yang matang!**`,
     category: "Tips",
-    image: "https://picsum.photos/seed/rain/600/400",
+    image: "https://images.pexels.com/photos/3807494/pexels-photo-3807494.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-08",
     readTime: 12,
