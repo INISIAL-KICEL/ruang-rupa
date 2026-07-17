@@ -15,10 +15,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "#lokasi",
   ];
   const now = new Date();
-  return sections.map((s) => ({
+  const entries: MetadataRoute.Sitemap = sections.map((s) => ({
     url: `${base}/${s}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: s === "" ? 1 : 0.7,
   }));
+
+  // Dedicated model detail pages.
+  entries.push({
+    url: `${base}/model/xforce`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  });
+
+  return entries;
 }

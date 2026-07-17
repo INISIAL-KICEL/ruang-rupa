@@ -2,10 +2,19 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, ArrowRight } from "lucide-react";
 import { cars, formatRupiah, type CarCategory } from "@/data/cars";
 import { getWaLink, siteConfig } from "@/config/site-config";
+
+/** Models that have a dedicated detail page (linked instead of WA). */
+const detailPages: Record<string, string> = {
+  xforce: "/model/xforce",
+};
+
+/** Next.js Link with framer-motion animation support. */
+const MotionLink = motion.create(Link);
 
 const filters: { label: string; value: "all" | CarCategory }[] = [
   { label: "Semua", value: "all" },
@@ -82,19 +91,19 @@ export default function VehicleLineup() {
               )}). Boleh minta info promo & simulasi kreditnya?`,
             );
 
-            return (
-              <motion.a
-                key={car.slug}
-                layout
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 24, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: (i % 4) * 0.06 }}
-                className="group flex flex-col items-center text-center"
-              >
+            const detailHref = detailPages[car.slug];
+
+            const motionProps = {
+              layout: true as const,
+              initial: { opacity: 0, y: 24, scale: 0.95 },
+              animate: { opacity: 1, y: 0, scale: 1 },
+              exit: { opacity: 0, scale: 0.9 },
+              transition: { duration: 0.4, delay: (i % 4) * 0.06 },
+              className: "group flex flex-col items-center text-center",
+            };
+
+            const cardInner = (
+              <>
                 {/* Image */}
                 <div className="relative flex aspect-[16/10] w-full items-center justify-center">
                   {car.badge && (
@@ -121,8 +130,25 @@ export default function VehicleLineup() {
                 {/* Hover CTA */}
                 <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-mitsu-red opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <MessageCircle className="h-3.5 w-3.5" />
-                  Tanya Promo Model Ini
+                  {detailHref ? "Lihat Detail Model" : "Tanya Promo Model Ini"}
                 </span>
+              </>
+            );
+
+            // Models with a detail page navigate internally; others open WhatsApp.
+            return detailHref ? (
+              <MotionLink key={car.slug} href={detailHref} {...motionProps}>
+                {cardInner}
+              </MotionLink>
+            ) : (
+              <motion.a
+                key={car.slug}
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                {...motionProps}
+              >
+                {cardInner}
               </motion.a>
             );
           })}

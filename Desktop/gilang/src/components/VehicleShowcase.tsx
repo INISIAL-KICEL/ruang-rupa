@@ -2,11 +2,17 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import { cars, carColors, formatRupiah } from "@/data/cars";
 import { getWaLink, siteConfig } from "@/config/site-config";
 import Dropdown from "@/components/Dropdown";
+
+/** Models with a dedicated detail page. */
+const detailPages: Record<string, string> = {
+  xforce: "/model/xforce",
+};
 
 export default function VehicleShowcase() {
   const [slug, setSlug] = useState("xforce");
@@ -101,15 +107,25 @@ export default function VehicleShowcase() {
             </p>
           </div>
 
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-8 inline-flex items-center gap-3 border-2 border-mitsu-black px-8 py-3.5 text-sm font-bold uppercase tracking-[0.15em] text-mitsu-black transition-colors hover:bg-mitsu-black hover:text-white"
-          >
-            Pelajari Lebih Lanjut
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          {detailPages[car.slug] ? (
+            <Link
+              href={detailPages[car.slug]}
+              className="group mt-8 inline-flex items-center gap-3 border-2 border-mitsu-black px-8 py-3.5 text-sm font-bold uppercase tracking-[0.15em] text-mitsu-black transition-colors hover:bg-mitsu-black hover:text-white"
+            >
+              Pelajari Lebih Lanjut
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          ) : (
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-8 inline-flex items-center gap-3 border-2 border-mitsu-black px-8 py-3.5 text-sm font-bold uppercase tracking-[0.15em] text-mitsu-black transition-colors hover:bg-mitsu-black hover:text-white"
+            >
+              Pelajari Lebih Lanjut
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          )}
         </div>
 
         {/* Right: car image + colors */}
