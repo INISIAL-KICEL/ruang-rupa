@@ -164,7 +164,7 @@ Mesin yang terawat bukan hanya tentang performa, tetapi juga tentang keselamatan
 
 **Ingat: Pencegahan selalu lebih murah daripada perbaikan!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1486324838cd-7c0a64a87c4f?w=800&q=80",
+    image: "https://via.placeholder.com/600x400/FF6B6B/FFFFFF?text=Perawatan+Mesin",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-15",
     readTime: 12,
@@ -700,7 +700,7 @@ Aki yang terawat bukan hanya tentang performa, tetapi juga tentang keandalan dan
 
 **Ingat: Aki yang baik adalah teman setia di setiap perjalanan!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1551632783-bb82be2d9a9c?w=800&q=80",
+    image: "https://via.placeholder.com/600x400/FFD93D/FFFFFF?text=Perawatan+Aki",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-12",
     readTime: 10,
@@ -909,7 +909,7 @@ Hemat bahan bakar adalah kombinasi dari teknik berkendara yang tepat, perawatan 
 
 **Target realistic:** 15-20% hemat dengan effort minimal, 25-30% dengan disiplin penuh.`,
     category: "Tips",
-    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80",
+    image: "https://via.placeholder.com/600x400/6BCB77/FFFFFF?text=Hemat+BBM",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-11",
     readTime: 12,
@@ -1076,7 +1076,7 @@ Servis berkala yang tepat adalah kunci untuk memiliki mobil yang selalu dalam ko
 
 **Ingat: Servis berkala adalah biaya maintenance kecil untuk mencegah repair besar!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1486262715619-67b519e0adf4?w=800&q=80",
+    image: "https://via.placeholder.com/600x400/4D96FF/FFFFFF?text=Servis+Berkala",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-10",
     readTime: 11,
@@ -1289,7 +1289,7 @@ New Xforce HEV bukan hanya mobil SUV biasa. Ini adalah perpaduan sempurna antara
 **Info & Test Drive:**
 Hubungi Mitsubishi Dipo Serang untuk pengalaman berkendara yang tak terlupakan.`,
     category: "Mitsubishi",
-    image: "https://images.unsplash.com/photo-1606611013016-969c19c27a37?w=800&q=80",
+    image: "https://via.placeholder.com/600x400/E91E63/FFFFFF?text=Xforce+HEV",
     author: "Tim Mitsubishi Serang",
     date: "2025-07-09",
     readTime: 13,
@@ -1514,7 +1514,7 @@ Persiapan mobil untuk musim hujan bukan hanya tentang teknis, tetapi juga tentan
 
 **Musim hujan aman dimulai dari persiapan yang matang!**`,
     category: "Tips",
-    image: "https://images.unsplash.com/photo-1553882900-d5628ca884b5?w=800&q=80",
+    image: "https://via.placeholder.com/600x400/9C27B0/FFFFFF?text=Musim+Hujan",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-08",
     readTime: 12,
