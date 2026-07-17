@@ -189,8 +189,8 @@ export default function PajeroDetail() {
               </div>
 
               {/* Big car image */}
-              <div className="relative flex flex-1 items-center justify-center bg-gradient-to-b from-white to-mitsu-silver/30 p-4 sm:p-6">
-                <div className="relative aspect-[3/2] w-full">
+              <div className="relative flex aspect-[16/11] items-center justify-center bg-gradient-to-b from-white to-mitsu-silver/30 p-4 sm:p-6">
+                <div className="relative h-full w-full">
                   <div
                     className="absolute left-1/2 top-1/2 h-[55%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[70px] transition-colors duration-700"
                     style={{ backgroundColor: activeColor?.swatch, opacity: 0.3 }}
