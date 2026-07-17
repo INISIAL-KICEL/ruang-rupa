@@ -175,14 +175,9 @@ export default function XpanderDetail() {
                 ))}
               </div>
 
-              {/* Big car image */}
-              <div className="relative flex aspect-[16/11] items-center justify-center bg-gradient-to-b from-white to-mitsu-silver/30 p-4 sm:p-6">
+              {/* Big car image — white bg to blend the JPG photos seamlessly */}
+              <div className="relative flex aspect-[16/11] items-center justify-center bg-white p-4 sm:p-6">
                 <div className="relative h-full w-full">
-                  <div
-                    className="absolute left-1/2 top-1/2 h-[55%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[70px] transition-colors duration-700"
-                    style={{ backgroundColor: activeColor?.swatch, opacity: 0.3 }}
-                  />
-                  <div className="absolute bottom-[12%] left-1/2 h-5 w-[60%] -translate-x-1/2 rounded-[50%] bg-black/10 blur-lg" />
                   <AnimatePresence initial={false}>
                     <motion.div
                       key={activeColor?.image}
