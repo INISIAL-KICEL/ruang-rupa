@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import Markdown from "react-markdown";
 import { blogs } from "@/data/blogs";
 import { Clock, Share2, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -129,44 +130,37 @@ export default async function BlogDetail({ params }: Props) {
         {/* Content */}
         <section className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-4xl px-5 lg:px-8">
-            <div className="prose prose-lg max-w-none dark:prose-invert">
-              {blog.content.split("\n").map((paragraph, index) => {
-                if (paragraph.startsWith("##")) {
-                  return (
-                    <h2
-                      key={index}
-                      className="mt-8 mb-4 text-2xl font-bold text-mitsu-black"
-                    >
-                      {paragraph.replace(/^##\s*/, "")}
-                    </h2>
-                  );
-                }
-                if (paragraph.startsWith("###")) {
-                  return (
-                    <h3
-                      key={index}
-                      className="mt-6 mb-3 text-xl font-bold text-mitsu-black"
-                    >
-                      {paragraph.replace(/^###\s*/, "")}
-                    </h3>
-                  );
-                }
-                if (paragraph.startsWith("-")) {
-                  return (
-                    <li key={index} className="ml-6 mb-2 text-mitsu-gray">
-                      {paragraph.replace(/^-\s*/, "")}
-                    </li>
-                  );
-                }
-                if (paragraph.trim() === "") {
-                  return <br key={index} />;
-                }
-                return (
-                  <p key={index} className="mb-4 text-mitsu-gray leading-relaxed">
-                    {paragraph}
-                  </p>
-                );
-              })}
+            <div className="prose prose-lg max-w-none">
+              <Markdown
+                components={{
+                  h2: ({node, ...props}) => (
+                    <h2 className="mt-8 mb-4 text-2xl font-bold text-mitsu-black" {...props} />
+                  ),
+                  h3: ({node, ...props}) => (
+                    <h3 className="mt-6 mb-3 text-xl font-bold text-mitsu-black" {...props} />
+                  ),
+                  p: ({node, ...props}) => (
+                    <p className="mb-4 text-mitsu-gray leading-relaxed text-base" {...props} />
+                  ),
+                  ul: ({node, ...props}) => (
+                    <ul className="list-disc list-inside mb-4 ml-4 space-y-2" {...props} />
+                  ),
+                  li: ({node, ...props}) => (
+                    <li className="text-mitsu-gray text-base" {...props} />
+                  ),
+                  ol: ({node, ...props}) => (
+                    <ol className="list-decimal list-inside mb-4 ml-4 space-y-2" {...props} />
+                  ),
+                  strong: ({node, ...props}) => (
+                    <strong className="font-bold text-mitsu-black" {...props} />
+                  ),
+                  em: ({node, ...props}) => (
+                    <em className="italic text-mitsu-gray" {...props} />
+                  ),
+                }}
+              >
+                {blog.content}
+              </Markdown>
             </div>
 
             {/* Keywords */}
