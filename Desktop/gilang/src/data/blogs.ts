@@ -164,7 +164,7 @@ Mesin yang terawat bukan hanya tentang performa, tetapi juga tentang keselamatan
 
 **Ingat: Pencegahan selalu lebih murah daripada perbaikan!**`,
     category: "Perawatan",
-    image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/cars/periksa-mesin.jpg",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-15",
     readTime: 12,
@@ -333,7 +333,7 @@ Ban adalah komponen keselamatan primer yang tidak boleh diabaikan. Dengan memper
 
 **Ingat: Ban yang baik bukan biaya, tapi investasi keselamatan!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1579454545775-7442d4e0be74?w=800&q=80",
+    image: "/cars/periksa-ban.jpg",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-14",
     readTime: 11,
