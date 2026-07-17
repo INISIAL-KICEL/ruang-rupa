@@ -164,7 +164,7 @@ Mesin yang terawat bukan hanya tentang performa, tetapi juga tentang keselamatan
 
 **Ingat: Pencegahan selalu lebih murah daripada perbaikan!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1486262715619-67b519e0adf4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1486324838cd-7c0a64a87c4f?w=800&q=80",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-15",
     readTime: 12,
@@ -509,7 +509,7 @@ Sistem pendingin yang terawat dengan baik adalah jaminan mesin yang sehat dan um
 
 **Kunci: Pencegahan lebih mudah daripada perbaikan overheating!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1488824849503-c93d5d4fbf45?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1625231724519-5c0b8c4b5b5f?w=800&q=80",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-13",
     readTime: 10,
@@ -700,7 +700,7 @@ Aki yang terawat bukan hanya tentang performa, tetapi juga tentang keandalan dan
 
 **Ingat: Aki yang baik adalah teman setia di setiap perjalanan!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1551632783-bb82be2d9a9c?w=800&q=80",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-12",
     readTime: 10,
@@ -909,7 +909,7 @@ Hemat bahan bakar adalah kombinasi dari teknik berkendara yang tepat, perawatan 
 
 **Target realistic:** 15-20% hemat dengan effort minimal, 25-30% dengan disiplin penuh.`,
     category: "Tips",
-    image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-11",
     readTime: 12,
@@ -1076,7 +1076,7 @@ Servis berkala yang tepat adalah kunci untuk memiliki mobil yang selalu dalam ko
 
 **Ingat: Servis berkala adalah biaya maintenance kecil untuk mencegah repair besar!**`,
     category: "Perawatan",
-    image: "https://images.unsplash.com/photo-1487958449943-ff81aa08d456?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1486262715619-67b519e0adf4?w=800&q=80",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-10",
     readTime: 11,
@@ -1514,7 +1514,7 @@ Persiapan mobil untuk musim hujan bukan hanya tentang teknis, tetapi juga tentan
 
 **Musim hujan aman dimulai dari persiapan yang matang!**`,
     category: "Tips",
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1553882900-d5628ca884b5?w=800&q=80",
     author: "Tim Layanan Mitsubishi Serang",
     date: "2025-07-08",
     readTime: 12,
