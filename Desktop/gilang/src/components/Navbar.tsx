@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { siteConfig, getWaLink } from "@/config/site-config";
@@ -9,6 +11,8 @@ import { siteConfig, getWaLink } from "@/config/site-config";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -31,7 +35,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:h-20 lg:px-8">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5">
           <span className="relative h-9 w-9 shrink-0">
             <Image
               src="/logo/mitsubishi-black.svg"
@@ -57,22 +61,28 @@ export default function Navbar() {
           >
             MITSUBISHI DIPO<span className="text-mitsu-red"> SERANG</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-8 lg:flex">
-          {siteConfig.nav.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-mitsu-red ${
-                  scrolled ? "text-mitsu-ink" : "text-white/90"
-                }`}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
+          {siteConfig.nav.map((item) => {
+            const href = isHomepage || item.label === "Blog" ? item.href : `/${item.href}`;
+            const isAnchor = item.href.startsWith("#");
+            const navLink = isAnchor ? (isHomepage ? item.href : `/${item.href}`) : item.href;
+
+            return (
+              <li key={item.href}>
+                <Link
+                  href={navLink}
+                  className={`text-sm font-medium transition-colors hover:text-mitsu-red ${
+                    scrolled ? "text-mitsu-ink" : "text-white/90"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex items-center gap-3">
@@ -110,27 +120,32 @@ export default function Navbar() {
             className="overflow-hidden border-t border-black/5 bg-white lg:hidden"
           >
             <ul className="flex flex-col px-5 py-4">
-              {siteConfig.nav.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block py-3 text-base font-medium text-mitsu-ink"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-              <a
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 flex items-center justify-center gap-2 rounded-full gradient-red px-5 py-3 text-sm font-semibold text-white"
-              >
-                <MessageCircle className="h-4 w-4" />
-                Hubungi Sales
-              </a>
+              {siteConfig.nav.map((item) => {
+                const isAnchor = item.href.startsWith("#");
+                const navLink = isAnchor ? (isHomepage ? item.href : `/${item.href}`) : item.href;
+
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={navLink}
+                      onClick={() => setOpen(false)}
+                      className="block py-3 text-base font-medium text-mitsu-ink"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 mx-5 flex items-center justify-center gap-2 rounded-full gradient-red px-5 py-3 text-sm font-semibold text-white"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Hubungi Sales
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
