@@ -34,17 +34,20 @@ export interface XforceSeries {
   variants: XforceVariant[];
 }
 
-const PREMIUM_ADDON = 25_000_000;
+// OTR Serang. White paint (Quartz White Pearl) adds +1,5 juta.
+const WHITE_ADDON = 1_500_000;
 
 // --- Exceed (bensin) ---
-const EXC_BASE = 388_000_000;
-const EXC_WHITE = 389_500_000;
+const EXC_BASE = 389_000_000;
+const EXC_WHITE = EXC_BASE + WHITE_ADDON;
 // --- Ultimate (bensin) ---
-const ULT_BASE = 399_000_000;
-const ULT_WHITE = 400_500_000;
+const ULT_BASE = 400_000_000;
+const ULT_WHITE = ULT_BASE + WHITE_ADDON;
+const ULT_PREMIUM = 425_000_000;
 // --- HEV (hybrid) ---
-const HEV_BASE = 445_000_000;
-const HEV_WHITE = 446_500_000;
+const HEV_BASE = 446_000_000;
+const HEV_WHITE = HEV_BASE + WHITE_ADDON;
+const HEV_PREMIUM = 471_000_000;
 
 export const xforceSeries: XforceSeries[] = [
   {
@@ -68,10 +71,10 @@ export const xforceSeries: XforceSeries[] = [
         id: "hev-premium",
         label: "Premium Package",
         name: "New Xforce HEV Premium Package",
-        price: HEV_BASE + PREMIUM_ADDON,
+        price: HEV_PREMIUM,
         colors: [
           { name: "Jet Black Mica", swatch: "#141414", image: "/cars/xforce-pp-black.webp" },
-          { name: "Quartz White Pearl", swatch: "#eeefec", image: "/cars/xforce-pp-white.webp", price: HEV_WHITE + PREMIUM_ADDON },
+          { name: "Quartz White Pearl", swatch: "#eeefec", image: "/cars/xforce-pp-white.webp", price: HEV_PREMIUM + WHITE_ADDON },
           { name: "Graphite Gray Metallic", swatch: "#3c4045", image: "/cars/xforce-pp-gray.webp" },
           { name: "Red Metallic", swatch: "#c01626", image: "/cars/xforce-pp-red.webp" },
           { name: "Energetic Yellow Metallic", swatch: "#e0a81f", image: "/cars/xforce-pp-yellow.webp" },
@@ -101,12 +104,12 @@ export const xforceSeries: XforceSeries[] = [
         id: "ultimate-premium",
         label: "Premium Package",
         name: "New Xforce Ultimate Premium Package",
-        price: ULT_BASE + PREMIUM_ADDON,
+        price: ULT_PREMIUM,
         colors: [
           { name: "Jet Black Mica", swatch: "#141414", image: "/cars/xforce-ultpp-black.webp" },
           { name: "Graphite Gray Metallic", swatch: "#3c4045", image: "/cars/xforce-ultpp-gray.webp" },
           { name: "Red Metallic", swatch: "#c01626", image: "/cars/xforce-ultpp-red.webp" },
-          { name: "Quartz White Pearl", swatch: "#eeefec", image: "/cars/xforce-ultpp-white.webp", price: ULT_WHITE + PREMIUM_ADDON },
+          { name: "Quartz White Pearl", swatch: "#eeefec", image: "/cars/xforce-ultpp-white.webp", price: ULT_PREMIUM + WHITE_ADDON },
           { name: "Energetic Yellow Metallic", swatch: "#e0a81f", image: "/cars/xforce-ultpp-yellow.webp" },
           { name: "Blade Silver Metallic", swatch: "#b6babe", image: "/cars/xforce-ultpp-silver.webp" },
         ],
