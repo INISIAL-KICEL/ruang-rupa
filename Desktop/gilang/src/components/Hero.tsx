@@ -56,7 +56,7 @@ export default function Hero() {
           preload="auto"
           poster="/scenes/destinator-scene.webp"
         >
-          <source src="/video/dst-hero-banner.mp4" type="video/mp4" />
+          <source src="/video/hero-background.mp4" type="video/mp4" />
         </video>
       </div>
 

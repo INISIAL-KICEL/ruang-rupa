@@ -8,6 +8,7 @@ import VehicleShowcase from "@/components/VehicleShowcase";
 import VehicleLineup from "@/components/VehicleLineup";
 import CompareTool from "@/components/CompareTool";
 import BannerCarousel from "@/components/BannerCarousel";
+import VideoShowcase from "@/components/VideoShowcase";
 import LifestyleGallery from "@/components/LifestyleGallery";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
@@ -32,6 +33,7 @@ export default function Home() {
         <VehicleLineup />
         <CompareTool />
         <BannerCarousel />
+        <VideoShowcase />
         <LifestyleGallery />
         <Gallery />
         <Testimonials />
