@@ -199,7 +199,7 @@ export default function XforceDetail() {
               </div>
 
               {/* Big car image — follows selected color */}
-              <div className="relative flex flex-1 items-center justify-center bg-gradient-to-b from-white to-mitsu-silver/30 p-6">
+              <div className="relative flex flex-1 items-center justify-center bg-gradient-to-b from-white to-mitsu-silver/30 p-4 sm:p-6">
                 <div className="relative aspect-[3/2] w-full">
                   <div
                     className="absolute left-1/2 top-1/2 h-[55%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[70px] transition-colors duration-700"

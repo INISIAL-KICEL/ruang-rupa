@@ -13,6 +13,7 @@ import Dropdown from "@/components/Dropdown";
 const detailPages: Record<string, string> = {
   xforce: "/model/xforce",
   destinator: "/model/destinator",
+  "pajero-sport": "/model/pajero-sport",
 };
 
 export default function VehicleShowcase() {

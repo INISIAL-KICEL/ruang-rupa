@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Dedicated model detail pages.
-  for (const slug of ["xforce", "destinator"]) {
+  for (const slug of ["xforce", "destinator", "pajero-sport"]) {
     entries.push({
       url: `${base}/model/${slug}`,
       lastModified: now,

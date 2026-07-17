@@ -12,6 +12,7 @@ import { getWaLink, siteConfig } from "@/config/site-config";
 const detailPages: Record<string, string> = {
   xforce: "/model/xforce",
   destinator: "/model/destinator",
+  "pajero-sport": "/model/pajero-sport",
 };
 
 /** Next.js Link with framer-motion animation support. */

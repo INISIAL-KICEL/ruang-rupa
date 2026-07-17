@@ -7,6 +7,7 @@ import { getWaLink, siteConfig } from "@/config/site-config";
 const modelLinks: { label: string; href: string }[] = [
   { label: "New Xforce", href: "/model/xforce" },
   { label: "Destinator", href: "/model/destinator" },
+  { label: "Pajero Sport", href: "/model/pajero-sport" },
   { label: "Semua Model", href: "/#lineup" },
 ];
 
